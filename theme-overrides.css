@@ -1,0 +1,130 @@
+/* Kavana Shree portfolio — rich black & beige theme */
+:root {
+  --ink: #100f0d;
+  --ink-2: #171512;
+  --ink-3: #211d18;
+  --panel: #211e19;
+  --panel-2: #29231c;
+  --beige: #e8dcc8;
+  --ivory: #f4eee4;
+  --muted: #b8aa96;
+  --muted-2: #8f8372;
+  --champagne: #c9ad82;
+  --champagne-light: #e0c9a5;
+  --line: rgba(232,220,200,.16);
+}
+html { scroll-behavior: smooth; scroll-padding-top: 88px; background: var(--ink); }
+body { background: var(--ink); color: var(--ivory); }
+.topbar {
+  background: rgba(16,15,13,.88); border-bottom: 1px solid var(--line);
+  box-shadow: 0 8px 30px rgba(0,0,0,.12);
+}
+.wordmark span, .period, .hero h2 span, .online-dot { color: var(--champagne-light); }
+.online-dot { background: var(--champagne-light); box-shadow: 0 0 12px rgba(224,201,165,.65); }
+.nav-links { color: var(--muted); }
+.nav-links a:hover, .text-link:hover { color: var(--champagne-light); }
+.contact-link { border-color: rgba(201,173,130,.48); color: var(--ivory); }
+.contact-link:hover { background: var(--champagne); color: var(--ink); }
+.top-label, .section-kicker, .exp-date, .exp-company, .project-type,
+.image-topline, .portrait-caption, .capability>span,
+.credential-list>div>span { color: var(--champagne); }
+.hero h1 { color: var(--ivory); }
+.hero h2, .hero-text, .focus-line, .section-note { color: var(--muted); }
+.btn-light { background: var(--champagne); color: var(--ink); }
+.btn-light:hover { background: var(--champagne-light); transform: translateY(-2px); }
+.focus-line { border-color: var(--line); }
+.focus-line b, .live-pill, .exp-company { color: var(--champagne-light); }
+.live-pill { border-color: rgba(201,173,130,.55); }
+.portrait-frame { background: var(--ink-2); border-color: var(--line); }
+.portrait-placeholder {
+  background: radial-gradient(ellipse at 50% 20%, #514332 0%, #29231c 48%, #171512 100%);
+}
+.portrait-placeholder:before, .portrait-placeholder:after { border-color: rgba(201,173,130,.25); }
+.portrait-caption { color: var(--muted); }
+.hero-stack span, .tags span { border-color: var(--line); color: var(--beige); }
+.section, #experience, #skills, #education { background: var(--ink); color: var(--ivory); }
+.section-light, .work-section {
+  background: linear-gradient(145deg, #211d18 0%, #191612 58%, #211c16 100%);
+  color: var(--ivory);
+  border-top: 1px solid rgba(232,220,200,.08);
+  border-bottom: 1px solid rgba(232,220,200,.08);
+}
+.section-light h2, .section h2, .contact-inner h2 { color: var(--ivory); }
+.section-light h2 em, .section h2 em, .contact-inner h2 em { color: var(--champagne-light); }
+.about-copy { color: var(--muted); }
+.about-copy .lead { color: var(--beige); }
+.stats { border-color: var(--line); }
+.stats strong { color: var(--ivory); }
+.stats span { color: var(--muted-2); }
+.experience-list, .experience { border-color: var(--line); }
+.exp-content h3 { color: var(--ivory); }
+.exp-content>p, .exp-content li { color: var(--muted); }
+.muted { color: var(--muted-2); }
+.work-section .section-note { color: var(--muted); }
+.filter { border-color: rgba(232,220,200,.25); color: var(--beige); }
+.filter.active, .filter:hover { background: var(--champagne); color: var(--ink); border-color: var(--champagne); }
+.project-card { background: #211d18; border-color: rgba(232,220,200,.15); box-shadow: 0 14px 35px rgba(0,0,0,.16); }
+.project-copy { color: var(--ivory); }
+.project-copy h3 { color: var(--ivory); }
+.project-copy>p:not(.project-type), .project-copy ul { color: var(--muted); }
+.project-copy .tags span { border-color: rgba(232,220,200,.2); color: var(--beige); }
+.project-type { color: var(--champagne); }
+.project-state { color: var(--champagne-light); }
+.project-image { filter: saturate(.72); }
+.thermassure { background: radial-gradient(circle at 55% 55%, #5c4934, #211b15 72%); }
+.fruit { background: radial-gradient(circle at 50% 50%, #716047, #282017 72%); }
+.password { background: radial-gradient(circle at 50%, #5a4c3d, #211b16 72%); }
+.house { background: radial-gradient(circle at 50% 70%, #78664e, #292219 75%); }
+.capability-grid { border-color: var(--line); }
+.capability { border-color: var(--line); }
+.capability>span { color: var(--champagne); }
+.capability h3 { color: var(--ivory); }
+.capability p { color: var(--muted); }
+.education-layout h2 { color: var(--ivory); }
+.education-entry { border-color: var(--champagne); color: var(--muted); }
+.education-entry>span { color: var(--champagne); }
+.education-entry h3 { color: var(--ivory); }
+.education-entry strong { color: var(--champagne-light); }
+.credential-list, .credential-list>div { border-color: var(--line); }
+.credential-list h3 { color: var(--ivory); }
+.credential-list p { color: var(--muted); }
+.contact-section {
+  background: linear-gradient(125deg, #d8c6a9 0%, #c9b18e 48%, #e5d8c4 100%);
+  color: #1b1711;
+}
+.contact-inner>p:not(.section-kicker), .contact-meta { color: #514638; }
+.contact-inner .section-kicker { color: #715b3e; }
+.contact-inner h2, .contact-inner h2 em { color: #1b1711; }
+.email-big { border-color: #796142; color: #1b1711; }
+.contact-meta button, .contact-meta a { color: #514638; }
+.contact-meta button:hover, .contact-meta a:hover { color: #17120d; }
+.footer { background: var(--ink); color: var(--muted-2); border-top: 1px solid var(--line); }
+.footer .wordmark { color: var(--ivory); }
+.toast { background: var(--champagne); color: var(--ink); }
+.menu-button { color: var(--ivory); }
+@media (max-width: 620px) {
+  .nav-links { background: #171512; border-color: var(--line); }
+}
+
+/* Scroll flow: elements enter smoothly and replay when scrolling in either direction. */
+.reveal {
+  opacity:  0;
+  transform: translate3d(0, 30px, 0);
+  transition: opacity .75s cubic-bezier(.2,.7,.2,1), transform .75s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+.reveal.reveal-left { transform: translate3d(-24px, 12px, 0); }
+.reveal.reveal-left.is-visible { transform: translate3d(0,0,0); }
+.reveal.reveal-right { transform: translate3d(24px, 12px, 0); }
+.reveal.reveal-right.is-visible { transform: translate3d(0,0,0); }
+.project-card, .experience, .capability, .credential-list>div {
+  transition: border-color .35s ease, box-shadow .35s ease, transform .35s ease;
+}
+.project-card:hover { transform: translateY(-5px); border-color: rgba(201,173,130,.42); box-shadow: 0 22px 48px rgba(0,0,0,.25); }
+.btn, .contact-link, .filter, .nav-links a { transition: color .25s ease, background .25s ease, border-color .25s ease, transform .25s ease; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal.is-visible { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+}

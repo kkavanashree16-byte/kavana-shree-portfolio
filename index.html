@@ -12,13 +12,15 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="theme-overrides.css">
+  <link rel="stylesheet" href="project-demos.css">
+  <script src="project-demos.js" defer></script>
 </head>
 <body>
   <header class="topbar">
     <a class="wordmark" href="#home">KS<span>.</span></a>
     <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav class="nav-links">
-      <a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact" class="contact-link">Contact ↗</a>
+      <a href="#work">Work</a><a href="#experience">Experience</a><a href="#simulations">Live demos</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact" class="contact-link">Contact ↗</a>
     </nav>
   </header>
 
@@ -69,12 +71,13 @@
           <div class="exp-content">
             <div class="exp-company">NEOCORTEX <span>PRODUCT DEVELOPMENT</span></div>
             <h3>Product Developer Intern</h3>
-            <p>Working on product development with a focus on application development, AI-assisted engineering and cloud-based technologies.</p>
+            <p>Working as a Product Developer Intern at NeoCortex, contributing to application development, AI-assisted engineering and cloud-based technologies. I enjoy taking ideas from requirements through implementation and testing.</p>
             <ul>
               <li>Research technical requirements, evaluate technologies and implement practical solutions.</li>
               <li>Use AI-powered development tools to support development workflows and code implementation.</li>
               <li>Learn and apply new technologies to solve technical challenges and build functional applications.</li>
               <li>Contribute to application development and cloud-related integration across ongoing product work.</li>
+              <li>Currently developing ThermAssure, an ongoing cold-chain monitoring solution that brings together a Flutter application, BLE device communication and cloud telemetry.</li>
             </ul>
             <div class="tags"><span>Flutter</span><span>Dart</span><span>Python</span><span>BLE</span><span>ESP32-C6</span><span>MQTT</span><span>HiveMQ</span><span>TimescaleDB</span><span>Tiger Cloud</span><span>Grafana</span><span>GitHub</span></div>
             <small class="muted">Technology list reflects tools explored and used across development activities, not necessarily every assignment.</small>
@@ -185,13 +188,57 @@
               <div class="tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Streamlit</span></div>
             </div>
           </article>
+          <article class="project-card wide thermassure-card" data-category="software">
+            <div class="project-image thermassure-visual">
+              <div class="image-topline">05 / ONGOING · IOT & CLOUD</div>
+              <div class="thermo-visual"><span class="thermo-label">THERMASSURE / DEVICE STATUS</span><strong>04.8<span>°C</span></strong><div class="thermo-track"><i></i></div><div class="thermo-meta"><span>BLE CONNECTED</span><span>CLOUD SYNC</span></div></div>
+            </div>
+            <div class="project-copy">
+              <p class="project-type">ONGOING PROJECT · COLD-CHAIN MONITORING · IOT</p>
+              <h3>ThermAssure <span class="live-pill">IN PROGRESS</span></h3>
+              <p>ThermAssure is an ongoing cold-chain monitoring solution designed to track temperature conditions while temperature-sensitive diagnostic materials are transported. It combines a Flutter-based application, BLE device communication and cloud telemetry to help identify temperature excursions and improve shipment visibility.</p>
+              <ul><li>Developing the mobile application and BLE gateway workflow for receiving device data.</li><li>Working across ESP32-C6, MQTT, HiveMQ, Timescale Cloud and Grafana for connected monitoring.</li></ul>
+              <div class="tags"><span>Flutter</span><span>Dart</span><span>BLE</span><span>ESP32-C6</span><span>MQTT</span><span>HiveMQ</span><span>Timescale Cloud</span><span>Grafana</span></div>
+            </div>
+          </article>
         </div>
 
       </div>
     </section>
 
+    <section class="section wrap simulations-section" id="simulations">
+      <div class="section-title-row"><div><p class="section-kicker">04 / TRY THE PROJECTS</p><h2>Small demos. <em>Real ideas.</em></h2></div><p class="section-note">Explore interactive, browser-based demonstrations inspired by my projects. These are illustrative simulations, not connected to deployed models or live hardware.</p></div>
+      <div class="simulation-grid">
+        <article class="simulation-card">
+          <div class="sim-top"><span>01 / LEARNING ASSISTANT</span><span class="sim-chip">INTERACTIVE</span></div><h3>Smart Study Buddy</h3><p>Build a simple study plan from your available time and subjects.</p>
+          <label for="study-hours">Available study time <b id="study-hours-value">3 hours</b></label><input id="study-hours" type="range" min="1" max="8" value="3">
+          <div class="sim-fields"><label>Priority subject<select id="study-priority"><option>Mathematics</option><option>Computer Science</option><option>Physics</option><option>English</option></select></label><button class="sim-button" id="make-study-plan">Create my plan ↗</button></div>
+          <div class="sim-output" id="study-plan-output" aria-live="polite">Choose your study time and priority, then create a plan.</div>
+        </article>
+        <article class="simulation-card">
+          <div class="sim-top"><span>02 / COMPUTER VISION</span><span class="sim-chip">DEMO</span></div><h3>Ripeness Classifier</h3><p>Select a sample fruit to explore an example classification result.</p>
+          <label for="fruit-choice">Sample produce</label><select id="fruit-choice"><option value="banana">Banana</option><option value="tomato">Tomato</option><option value="mango">Mango</option><option value="avocado">Avocado</option></select>
+          <button class="sim-button full" id="scan-fruit">Run sample classification ↗</button><div class="sim-output" id="fruit-output" aria-live="polite">Your sample classification will appear here.</div><small>Preset demonstration only — no image is uploaded and no CNN model is running here.</small>
+        </article>
+        <article class="simulation-card">
+          <div class="sim-top"><span>03 / SECURITY</span><span class="sim-chip">LOCAL ONLY</span></div><h3>Password Strength Check</h3><p>Try a made-up sample phrase. Never enter a password you actually use.</p>
+          <label for="demo-password">Sample password</label><input id="demo-password" type="password" autocomplete="off" placeholder="Type a made-up password"><div class="strength-meter" id="strength-meter"><i></i><i></i><i></i><i></i></div><div class="sim-output" id="password-output" aria-live="polite">Your check runs locally in this browser.</div><small>Input is not sent to a server or stored by this demo.</small>
+        </article>
+        <article class="simulation-card">
+          <div class="sim-top"><span>04 / PREDICTIVE ANALYTICS</span><span class="sim-chip">ESTIMATE</span></div><h3>Home Price Explorer</h3><p>Adjust a few property details to see how a simple illustrative estimate changes.</p>
+          <div class="sim-fields"><label>Area (sq. ft.)<input id="home-area" type="number" min="300" max="10000" value="1200"></label><label>Bedrooms<select id="home-beds"><option value="1">1 BHK</option><option value="2" selected>2 BHK</option><option value="3">3 BHK</option><option value="4">4 BHK</option></select></label></div>
+          <label for="home-location">Location category</label><select id="home-location"><option value="6500">Developing area</option><option value="8500" selected>Established area</option><option value="11500">Prime area</option></select><button class="sim-button full" id="estimate-home">Calculate sample estimate ↗</button><div class="sim-output" id="home-output" aria-live="polite">Enter property details to see an illustrative estimate.</div><small>Uses a transparent demo formula, not your trained model or a real market valuation.</small>
+        </article>
+        <article class="simulation-card thermassure-sim">
+          <div class="sim-top"><span>05 / ONGOING IOT PROJECT</span><span class="sim-chip">SIMULATED DEVICE</span></div><h3>ThermAssure Monitor</h3><p>Explore a simulated cold-chain device reading and temperature excursion alert.</p>
+          <div class="device-status"><span><i class="status-dot" id="device-dot"></i><b id="device-state">DEVICE CONNECTED</b></span><strong id="device-temp">4.8°C</strong></div><div class="device-chart" aria-label="Illustrative recent temperature readings"><i style="height:42%"></i><i style="height:48%"></i><i style="height:44%"></i><i style="height:52%"></i><i style="height:46%"></i><i style="height:55%"></i><i style="height:49%"></i><i style="height:58%"></i><i style="height:52%"></i><i style="height:60%"></i><i style="height:54%"></i><i style="height:57%"></i></div>
+          <div class="device-meta"><span>BATTERY <b id="device-battery">92%</b></span><span>SYNC <b id="device-sync">JUST NOW</b></span></div><div class="sim-fields"><button class="sim-button" id="normal-reading">Normal reading</button><button class="sim-button alert-button" id="excursion-reading">Simulate excursion</button></div><div class="sim-output" id="thermassure-output" aria-live="polite">Temperature is within the example target range.</div><small>Simulation only — not connected to an ESP32, BLE, MQTT or cloud dashboard.</small>
+        </article>
+      </div>
+    </section>
+
     <section class="section wrap" id="skills">
-      <div class="section-title-row"><div><p class="section-kicker">04 / CAPABILITIES</p><h2>Technical <em>toolkit.</em></h2></div><p class="section-note">Technologies and tools used across coursework, internships and projects.</p></div>
+      <div class="section-title-row"><div><p class="section-kicker">05 / CAPABILITIES</p><h2>Technical <em>toolkit.</em></h2></div><p class="section-note">Technologies and tools used across coursework, internships and projects.</p></div>
       <div class="capability-grid">
         <div class="capability"><span>01</span><h3>Programming</h3><p>Python, Java, C, HTML, CSS, Dart</p></div>
         <div class="capability"><span>02</span><h3>AI & Machine Learning</h3><p>TensorFlow, Scikit-learn, OpenCV, NumPy, Pandas, NLP, Deep Learning</p></div>
@@ -206,13 +253,13 @@
 
     <section class="education-section section-light" id="education">
       <div class="wrap education-layout">
-        <div><p class="section-kicker">05 / EDUCATION</p><h2>Learning is a<br><em>continuous process.</em></h2></div>
+        <div><p class="section-kicker">06 / EDUCATION</p><h2>Learning is a<br><em>continuous process.</em></h2></div>
         <div class="education-entry"><span>2022 — 2026</span><h3>Bachelor of Engineering</h3><p>Computer Science and Design Engineering</p><p>Atria Institute of Technology, Bengaluru</p><p>Affiliated to Visvesvaraya Technological University (VTU)</p><strong>CGPA: 7.48 / 10</strong></div>
       </div>
     </section>
 
     <section class="section wrap" id="credentials">
-      <div class="section-title-row"><div><p class="section-kicker">06 / PROFESSIONAL DEVELOPMENT</p><h2>Courses & <em>credentials.</em></h2></div></div>
+      <div class="section-title-row"><div><p class="section-kicker">07 / PROFESSIONAL DEVELOPMENT</p><h2>Courses & <em>credentials.</em></h2></div></div>
       <div class="credential-list">
         <div><span>01</span><h3>Graduate Diploma in Computer Programming</h3><p>CMS Computer Training Institute</p></div>
         <div><span>02</span><h3>Cybersecurity Analyst Virtual Experience</h3><p>Tata · Forage</p></div>
@@ -223,7 +270,7 @@
 
     <section class="contact-section" id="contact">
       <div class="wrap contact-inner">
-        <p class="section-kicker">07 / CONTACT</p>
+        <p class="section-kicker">08 / CONTACT</p>
         <h2>Let's make<br><em>something useful.</em></h2>
         <p>Open to opportunities and collaborations in product development, software engineering and AI-driven applications.</p>
         <a class="email-big" href="mailto:kkavanashree16@gmail.com">kkavanashree16@gmail.com ↗</a>

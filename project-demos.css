@@ -1,0 +1,43 @@
+/* Interactive demos — designed to inherit the portfolio's black / beige palette. */
+.simulations-section { padding-top: 92px; padding-bottom: 100px; }
+.simulation-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:34px; }
+.simulation-card { background:#171819; color:#f4f0e8; border:1px solid rgba(229,216,193,.18); border-radius:16px; padding:25px; min-width:0; }
+.sim-top { display:flex; justify-content:space-between; align-items:center; gap:12px; color:#c9bda8; font:10px 'DM Mono',monospace; letter-spacing:.08em; }
+.sim-chip { border:1px solid rgba(222,207,180,.35); border-radius:30px; padding:5px 8px; white-space:nowrap; }
+.simulation-card h3 { font-size:25px; margin:20px 0 8px; color:#f4f0e8; }
+.simulation-card p { color:#bdb8ae; font-size:14px; line-height:1.65; min-height:46px; }
+.simulation-card label { display:block; color:#e7dfd1; font-size:12px; margin:17px 0 8px; }
+.simulation-card label b { float:right; color:#d7c5a5; }
+.simulation-card input:not([type=range]), .simulation-card select { width:100%; background:#242526; color:#f4f0e8; border:1px solid #494640; border-radius:8px; padding:11px 12px; font:inherit; }
+.simulation-card input[type=range] { width:100%; accent-color:#d7c5a5; }
+.sim-fields { display:grid; grid-template-columns:1fr 1fr; align-items:end; gap:12px; }
+.sim-button { border:1px solid #d6c5a8; color:#171819; background:#d6c5a8; border-radius:8px; padding:11px 13px; font:600 12px 'DM Sans',sans-serif; cursor:pointer; transition:transform .2s,background .2s; }
+.sim-button:hover { transform:translateY(-2px); background:#eee2ce; }
+.sim-button.full { width:100%; margin-top:17px; }
+.sim-button.alert-button { background:transparent; color:#e3c7b7; border-color:#a8755e; }
+.sim-output { background:#222425; border:1px solid rgba(229,216,193,.15); border-radius:9px; padding:13px 14px; margin-top:16px; color:#cfc8bb; font-size:13px; line-height:1.65; min-height:54px; }
+.sim-output strong { color:#f0dfc3; }
+.sim-output ul { padding-left:18px; margin:8px 0; }
+.simulation-card small { display:block; color:#928d84; font-size:10px; line-height:1.5; margin-top:10px; }
+.strength-meter { display:flex; gap:6px; margin-top:13px; }
+.strength-meter i { height:5px; flex:1; border-radius:5px; background:#41413e; }
+.strength-meter i.filled { background:#d6c5a8; }
+.thermassure-sim { grid-column:1/-1; }
+.device-status { display:flex; align-items:center; justify-content:space-between; padding:16px 0 12px; }
+.device-status span { display:flex; align-items:center; gap:9px; font:10px 'DM Mono',monospace; letter-spacing:.06em; color:#c9c1b4; }
+.device-status strong { font:500 34px 'DM Mono',monospace; color:#eadcc5; }
+.device-status strong span { font-size:16px; }
+.status-dot { width:8px; height:8px; display:inline-block; border-radius:50%; background:#9cb69c; box-shadow:0 0 10px #9cb69c; }
+.status-dot.is-alert { background:#d88a6d; box-shadow:0 0 10px #d88a6d; }
+.device-chart { height:72px; display:flex; align-items:end; gap:7px; padding:10px 0; border-bottom:1px solid #494640; }
+.device-chart i { flex:1; display:block; min-height:8px; background:linear-gradient(0deg,#8c806d,#d6c5a8); border-radius:4px 4px 0 0; opacity:.85; }
+.device-meta { display:flex; justify-content:space-between; margin-top:12px; color:#a9a397; font:10px 'DM Mono',monospace; }
+.device-meta b { color:#e9dfcf; font-weight:500; margin-left:5px; }
+.thermo-visual { margin:24px; padding:28px; background:rgba(12,14,14,.76); border:1px solid rgba(224,211,186,.28); border-radius:12px; }
+.thermo-label { display:block; font:10px 'DM Mono',monospace; letter-spacing:.12em; color:#c9bda8; }
+.thermo-visual strong { display:block; font:500 58px 'DM Mono',monospace; color:#e9dfcf; margin:18px 0; }
+.thermo-visual strong span { font-size:24px; }
+.thermo-track { height:5px; background:#4b4b43; border-radius:8px; overflow:hidden; }
+.thermo-track i { display:block; width:58%; height:100%; background:#d6c5a8; }
+.thermo-meta { display:flex; justify-content:space-between; color:#c9bda8; font:9px 'DM Mono',monospace; margin-top:13px; }
+@media(max-width:760px) { .simulation-grid { grid-template-columns:1fr; } .thermassure-sim { grid-column:auto; } .sim-fields { grid-template-columns:1fr; } .simulation-card p { min-height:0; } }
